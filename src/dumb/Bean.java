@@ -26,6 +26,13 @@ public void dbQuery(String input) {
 	
 	PrintWriter out = Controller.out;
 	try {
+		Class.forName("com.mysql.jdbc.Driver");
+	} catch (ClassNotFoundException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
+
+	try {
 		if (!started) {
 			con = DriverManager.getConnection(
 					"jdbc:mysql://localhost:3308/foundation?useLegacyDatetimeCode=false&serverTimezone=Europe/Stockholm",

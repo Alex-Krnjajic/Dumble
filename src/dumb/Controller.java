@@ -49,13 +49,7 @@ public class Controller extends HttpServlet {
 		input = request.getParameter("input");
 		Bean bean = new Bean();
 
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-
+		
 		try {
 			
 			ArrayList<String> inputList = new ArrayList<String>();
